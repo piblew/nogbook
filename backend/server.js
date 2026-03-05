@@ -1,11 +1,12 @@
 const http = require("http");
 
-const jsonPath = 'https://jsonhosting.com/api/json/021a0909';
-const jsonKey = '97c03ab4c526c505de3a6cd936c4f6a3d253c13497580f75212c3614e8da87d1';
+const jsonPath = process.env.JSON_PATH
+const jsonKey = process.env.EDIT_KEY
+const readKey = process.env.READ_KEY;
+const writeKey = process.env.WRITE_KEY;
+
 let recieveData = '';
 let shareData;
-const readKey = "read.key";
-const writeKey = "write.key";
 
 function readJson(){
     fetch(jsonPath+"/raw",{method:"GET"})
