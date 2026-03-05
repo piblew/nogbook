@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div id="auth-box">
+        <label style="display:block">Enter Key</label>
+        <input id="key-input" type="text">
+        <button id="key-submit">Enter</button>
+    </div>
     <div id="input-box">
         <label>Head</label>
         <input id="head" type="text" style="display:block">
@@ -13,10 +18,17 @@
         <textarea id="body" name="load" rows=3 cols=30></textarea>
         <div id="buttons-div">
             <button id="submit-button">Submit</button>
-            <button id="refresh-button">Refresh</button>
+            <button class="refresh-button">Refresh</button>
         </div>
     </div>
     <div id="header-box"></div>
-    <script src="script.js"></script>
+    <div id=note-view>
+        <div id="note-display-div">
+            <div id="note-head"></div>
+            <div id="note-body"></div>
+        </div>
+        <button id="delete-note-button">Delete</button>
+    </div>
+    <script src="script.js"></script>    
 </body>
 </html>
